@@ -1,0 +1,14 @@
+<div id="open-modal-team" class="modal-window">
+    <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h1>{{team ? 'Edit' : 'Create'}} Team Form</h1>
+        <div>
+            <form #playerForm="ngForm" novalidate (ngSubmit)="onSubmit(playerForm)">
+                
+                <div class="submit-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

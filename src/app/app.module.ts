@@ -12,13 +12,15 @@ import { PlayerTableComponent } from './player-table/player-table.component';
 import { PlayerDialogComponent } from './player-dialog/player-dialog.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TeamDialogComponent } from './team-dialog/team-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamTableComponent,
     PlayerTableComponent,
-    PlayerDialogComponent
+    PlayerDialogComponent,
+    TeamDialogComponent
   ],
   imports: [
     BrowserModule,

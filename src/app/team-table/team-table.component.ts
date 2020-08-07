@@ -12,7 +12,8 @@ import { Country } from '../interfaces/player';
 export class TeamTableComponent implements OnInit {
   public teams$: Observable<Team[]>;  //la $ al final dice que esta variable es asincrona
   public tableHeaders = TeamsTableHeaders;
-
+  public selectedTeam: Team;
+  public showModal = false;
   constructor(private teamService: TeamService) { }
 
   ngOnInit(): void {
@@ -27,6 +28,14 @@ export class TeamTableComponent implements OnInit {
         this.teamService.addTeam(team)
       }
     })
+  }
+
+  newTeam(){
+    this.showModal = true;
+    this.selectedTeam = null;
+    setTimeout(() => {
+      window.location.replace('#open-modal-team');
+    });
   }
 
 }
