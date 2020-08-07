@@ -20,7 +20,7 @@ script:
 deploy:
   provider: pages
   edge: true
-  cleanup: true
+  skip_cleanup: true
   keep-history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/typescript-con-angular
