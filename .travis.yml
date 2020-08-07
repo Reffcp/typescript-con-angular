@@ -13,14 +13,13 @@ script:
 - ng lint
 - ng build --prod --base-href https://reffcp.github.io/typescript-con-angular/
 
+
 deploy:
   provider: pages
-  edge: true,
   cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist/
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/typescript-con-angular
   target-branch: gh-pages
   commit_message: "Deploy Release"
-  on: 
+  on:
     branch: master
