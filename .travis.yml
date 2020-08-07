@@ -1,4 +1,7 @@
 language: node_js
+cache: 
+  directories:
+    - ~/.npm
 node_js:
   - "12"
 dist: trusty
@@ -11,15 +14,18 @@ before_script:
   - npm install -g @angular/cli
 script:
 - ng lint
-- ng build --prod --base-href https://reffcp.github.io/typescript-con-angular/
+- ng build --prod
 
 
 deploy:
   provider: pages
+  edge: true
   cleanup: true
+  keep-history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/typescript-con-angular
   target-branch: gh-pages
   commit_message: "Deploy Release"
   on:
     branch: master
+
