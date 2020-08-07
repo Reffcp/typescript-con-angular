@@ -5,6 +5,8 @@ dist: trusty
 branches:
   only:
   - master
+git:
+  depth: 3
 before_script:
   - npm install -g @angular/cli
 script:
